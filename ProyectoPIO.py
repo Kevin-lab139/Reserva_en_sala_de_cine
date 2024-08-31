@@ -11,7 +11,7 @@ class Cine:
         print("Sala creada:")
         for fila in self.SALA:
             print(" ".join(fila))
-            
+
     def ver_sala(self):
         print("Sala:")
         for fila in self.SALA:
@@ -24,3 +24,7 @@ class Cine:
                 return asiento_seleccionado
             else:
                 print("Error: Por favor seleccione asientos válidos.")
+
+
+#Prueba Git
+
