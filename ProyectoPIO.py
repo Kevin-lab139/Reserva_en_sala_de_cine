@@ -26,5 +26,5 @@ class Cine:
                 print("Error: Por favor seleccione asientos válidos.")
 
 
-#Prueba Git
+
 
