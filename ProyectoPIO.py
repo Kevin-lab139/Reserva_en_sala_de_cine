@@ -56,6 +56,31 @@ class Cine:
         else:
             for asientos, datos in self.RESERVAS.items():
                 print(f"Asientos {asientos}: Usuario {datos['usuario']}")
+if __name__ == "__main__":
+    cine = Cine()
+    while True:
+        print("\nBienvenido al Teatro Apolo")
+        print("1. Crear sala")
+        print("2. Ver sala y seleccionar asiento")
+        print("3. Realizar reserva")
+        print("4. Ver mis reservas")
+        print("5. Salir")
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == "1":
+            cine.crear_sala()
+        elif opcion == "2":
+            asiento_seleccionado = cine.ver_sala()
+        elif opcion == "3":
+            usuario = input("Ingrese su nombre: ")
+            cine.realizar_reserva(asiento_seleccionado, usuario)
+        elif opcion == "4":
+            cine.ver_mis_reservas()
+        elif opcion == "5":
+            print("Gracias por usar la aplicación")
+            break
+        else:
+            print("Opción no válida")
 
 
 
