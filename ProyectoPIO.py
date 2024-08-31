@@ -11,3 +11,16 @@ class Cine:
         print("Sala creada:")
         for fila in self.SALA:
             print(" ".join(fila))
+            
+    def ver_sala(self):
+        print("Sala:")
+        for fila in self.SALA:
+            print(" ".join(fila))
+        
+        while True:
+            asiento_seleccionado = input("Seleccione los asientos (separados por comas): ").split(",")
+            # Validar asientos seleccionados
+            if all(self.validar_asiento(asiento) for asiento in asiento_seleccionado):
+                return asiento_seleccionado
+            else:
+                print("Error: Por favor seleccione asientos válidos.")
